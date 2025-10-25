@@ -1,185 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vamsi Teja - Portfolio</title>
-<style>
-:root {
---color-background: rgba(252, 252, 249, 1);
---color-surface: rgba(255, 255, 253, 1);
---color-text: rgba(19, 52, 59, 1);
---color-text-secondary: rgba(98, 108, 113, 1);
---color-primary: rgba(33, 128, 141, 1);
---color-primary-hover: rgba(29, 116, 128, 1);
---color-border: rgba(94, 82, 64, 0.2);
---color-card-border: rgba(94, 82, 64, 0.12);
---font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
---radius-lg: 12px;
---space-16: 16px;
---space-24: 24px;
---space-32: 32px;
---shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-}
-@media (prefers-color-scheme: dark) {
-:root {
---color-background: rgba(31, 33, 33, 1);
---color-surface: rgba(38, 40, 40, 1);
---color-text: rgba(245, 245, 245, 1);
---color-text-secondary: rgba(167, 169, 169, 0.7);
---color-primary: rgba(50, 184, 198, 1);
---color-primary-hover: rgba(45, 166, 178, 1);
---color-border: rgba(119, 124, 124, 0.3);
---color-card-border: rgba(119, 124, 124, 0.2);
-}
-}
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body {
-font-family: var(--font-family-base);
-background-color: var(--color-background);
-color: var(--color-text);
-line-height: 1.6;
-padding: var(--space-24);
-}
-.container {
-max-width: 900px;
-margin: 0 auto;
-}
-header {
-text-align: center;
-padding: var(--space-32) 0;
-border-bottom: 1px solid var(--color-border);
-margin-bottom: var(--space-32);
-}
-h1 {
-font-size: 2.5rem;
-font-weight: 600;
-margin-bottom: var(--space-16);
-letter-spacing: -0.02em;
-}
-.tagline {
-color: var(--color-text-secondary);
-font-size: 1.1rem;
-margin-bottom: var(--space-24);
-}
-.social-links {
-display: flex;
-gap: var(--space-16);
-justify-content: center;
-flex-wrap: wrap;
-}
-.social-links a {
-color: var(--color-primary);
-text-decoration: none;
-font-weight: 500;
-transition: color 0.2s;
-}
-.social-links a:hover {
-color: var(--color-primary-hover);
-}
-section {
-margin-bottom: var(--space-32);
-}
-h2 {
-font-size: 1.8rem;
-font-weight: 600;
-margin-bottom: var(--space-24);
-color: var(--color-text);
-}
-.card {
-background-color: var(--color-surface);
-border: 1px solid var(--color-card-border);
-border-radius: var(--radius-lg);
-padding: var(--space-24);
-margin-bottom: var(--space-16);
-box-shadow: var(--shadow-md);
-transition: transform 0.2s;
-}
-.card:hover {
-transform: translateY(-2px);
-}
-.card h3 {
-font-size: 1.3rem;
-font-weight: 600;
-margin-bottom: 8px;
-color: var(--color-text);
-}
-.card p {
-color: var(--color-text-secondary);
-margin-bottom: 8px;
-}
-.card .meta {
-display: flex;
-gap: var(--space-16);
-font-size: 0.9rem;
-color: var(--color-text-secondary);
-margin-top: var(--space-16);
-}
-.skills {
-display: flex;
-flex-wrap: wrap;
-gap: 12px;
-}
-.skill-tag {
-background-color: rgba(var(--color-primary), 0.1);
-color: var(--color-primary);
-padding: 6px 12px;
-border-radius: 6px;
-font-size: 0.9rem;
-font-weight: 500;
-}
-footer {
-text-align: center;
-padding: var(--space-32) 0;
-color: var(--color-text-secondary);
-border-top: 1px solid var(--color-border);
-margin-top: var(--space-32);
-}
-@media (max-width: 768px) {
-h1 {
-font-size: 2rem;
-}
-h2 {
-font-size: 1.5rem;
-}
-body {
-padding: var(--space-16);
-}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamsi Teja Chevula - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .contact-links {
+            margin-top: 20px;
+        }
+        
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .contact-links a:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .experience-item, .education-item, .certification-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child, .education-item:last-child, .certification-item:last-child {
+            border-bottom: none;
+        }
+        
+        .job-title, .degree {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .company, .institution {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .skill-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1em;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<header>
-<h1>Vamsi Teja</h1>
-<p class="tagline">Developer | Tech Enthusiast | Problem Solver</p>
-<div class="social-links">
-<a href="mailto:vamsitejayadav@gmail.com">Email</a>
-<a href="https://github.com/Vamsi-Teja-Chevula" target="_blank" rel="noopener noreferrer">GitHub</a>
-<a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a>
-</div>
-</header>
-<section id="about">
-<h2>About Me</h2>
-<div class="card">
-<p>
-I'm a passionate developer with a keen interest in building innovative solutions and exploring new technologies.
-I love working on challenging projects that push the boundaries of what's possible with code.
-</p>
-<p style="margin-top: 16px;">
-When I'm not coding, you can find me watching Formula 1, playing chess, or exploring the latest tech trends.
-</p>
-</div>
-</section>
-<section id="projects">
-<h2>Projects</h2>
-<div class="card">
-<h3>Project Title 1</h3>
-<p>A comprehensive web application that helps users manage their tasks efficiently with real-time collaboration features.</p>
-<div class="meta">
-<span>🔗 <a href="
+    <div class="container">
+        <header>
+            <h1>Vamsi Teja Chevula</h1>
+            <div class="subtitle">Advanced Application Engineer Analyst @ Accenture | NITK'23</div>
+            <div class="contact-links">
+                <a href="https://in.linkedin.com/in/vamsi-teja-chevula" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Vamsi-Teja-Chevula" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am an Advanced Application Engineer Analyst at Accenture, specializing in AI/ML solutions and data engineering. With a strong foundation in artificial intelligence and machine learning, I work on developing and implementing cutting-edge AI solutions that drive business value. My expertise spans across generative AI, large language models, cloud technologies, and big data platforms.</p>
+            <p>I hold a Bachelor's degree in Civil Engineering from the National Institute of Technology Karnataka (NITK) and have a passion for leveraging technology to solve complex problems. My work at Accenture involves creating innovative AI/ML applications that transform business processes and enhance decision-making capabilities.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <div class="job-title">Advanced Application Engineer Analyst</div>
+                <div class="company">Accenture</div>
+                <div class="date">October 2023 - Present</div>
+                <p>Working on AI/ML projects and solutions, developing and implementing advanced artificial intelligence and machine learning applications. Focus areas include generative AI, large language models, and data engineering using Azure cloud platform and big data technologies.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-title">Gaming Events Organizer</div>
+                <div class="company">ENGINEER - National Institute of Technology Karnataka</div>
+                <div class="date">2019 - 2023</div>
+                <p>Organized and managed gaming events as part of ENGINEER, NITK's annual technical and cultural festival. Coordinated event logistics, participant engagement, and ensured successful execution of gaming competitions.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="degree">Bachelor of Technology in Civil Engineering</div>
+                <div class="institution">National Institute of Technology Karnataka (NITK)</div>
+                <div class="date">2019 - 2023</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree">Intermediate Education</div>
+                <div class="institution">Sri Chaitanya Junior College</div>
+                <div class="date">2017 - 2019 | GPA: 10.0</div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">GEN AI</div>
+                <div class="skill-item">AI</div>
+                <div class="skill-item">Machine Learning</div>
+                <div class="skill-item">LLM</div>
+                <div class="skill-item">Azure</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Hive</div>
+                <div class="skill-item">Spark</div>
+                <div class="skill-item">Hadoop</div>
+                <div class="skill-item">C</div>
+                <div class="skill-item">C++</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Tableau</div>
+                <div class="skill-item">Excel</div>
+                <div class="skill-item">Word</div>
+                <div class="skill-item">HTML</div>
+                <div class="skill-item">AutoCAD</div>
+                <div class="skill-item">Communication</div>
+                <div class="skill-item">Data Analysis</div>
+                <div class="skill-item">Apache Spark</div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            
+            <div class="certification-item">
+                <div class="job-title">Microsoft Azure AI Fundamentals</div>
+                <div class="company">Microsoft</div>
+            </div>
+            
+            <div class="certification-item">
+                <div class="job-title">Microsoft Azure Data Fundamentals</div>
+                <div class="company">Microsoft</div>
+            </div>
+            
+            <div class="certification-item">
+                <div class="job-title">Microsoft Azure Fundamentals</div>
+                <div class="company">Microsoft</div>
+            </div>
+            
+            <div class="certification-item">
+                <div class="job-title">Microsoft Security, Compliance, and Identity Fundamentals</div>
+                <div class="company">Microsoft</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
