@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamsi Teja Chevula - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            animation: gradientShift 10s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+            50% { background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); }
+            100% { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .section {
+            margin: 30px 0;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-item:hover, .education-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-title {
+            font-size: 1.3em;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            animation: popIn 0.5s ease;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .certification-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .certification-item:hover {
+            background: rgba(102, 126, 234, 0.2);
+            padding-left: 25px;
+        }
+
+        .certification-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .certification-item a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .contact-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Vamsi Teja Chevula</h1>
+            <div class="subtitle">Advanced Application Engineer Analyst</div>
+            <div class="contact-links">
+                <a href="mailto:vamsitejayadav@gmail.com">📧 Email</a>
+                <a href="https://in.linkedin.com/in/vamsi-teja-chevula" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/Vamsi-Teja-Chevula" target="_blank">💻 GitHub</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Experience</h2>
+            <div class="experience-item">
+                <div class="job-title">Advanced Application Engineer Analyst</div>
+                <div class="company">Accenture</div>
+                <div class="date">October 2023 - Present</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Education</h2>
+            <div class="education-item">
+                <div class="job-title">B.Tech in Civil Engineering</div>
+                <div class="company">National Institute of Technology Karnataka (NITK)</div>
+                <div class="date">2019 - 2023</div>
+            </div>
+            <div class="education-item">
+                <div class="job-title">Intermediate Education</div>
+                <div class="company">Sri Chaitanya Junior College</div>
+                <div class="date">2017 - 2019 | GPA: 10.0</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Skills</h2>
+            <div class="skills-container">
+                <span class="skill">GEN AI</span>
+                <span class="skill">AI</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">LLM</span>
+                <span class="skill">Azure</span>
+                <span class="skill">Python</span>
+                <span class="skill">Hive</span>
+                <span class="skill">Spark</span>
+                <span class="skill">Hadoop</span>
+                <span class="skill">C</span>
+                <span class="skill">C++</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Tableau</span>
+                <span class="skill">Excel</span>
+                <span class="skill">Word</span>
+                <span class="skill">HTML</span>
+                <span class="skill">AutoCAD</span>
+                <span class="skill">Communication</span>
+                <span class="skill">Data Analysis</span>
+                <span class="skill">Apache Spark</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏆 Certifications</h2>
+            <div class="certification-item">
+                <strong>Microsoft Certified:</strong> Azure AI Fundamentals<br>
+                <a href="https://learn.microsoft.com/api/credentials/share/en-us/VamsiTejaChevula-2765/8629B0AE9349F926?sharingId=17E88CFAA2995777" target="_blank">View Credential</a>
+            </div>
+            <div class="certification-item">
+                <strong>Microsoft Certified:</strong> Azure Data Fundamentals<br>
+                <a href="https://learn.microsoft.com/api/credentials/share/en-us/VamsiTejaChevula-2765/BDF6FE28BC54B9C5?sharingId=17E88CFAA2995777" target="_blank">View Credential</a>
+            </div>
+            <div class="certification-item">
+                <strong>Microsoft Certified:</strong> Azure Fundamentals<br>
+                <a href="https://learn.microsoft.com/api/credentials/share/en-us/VamsiTejaChevula-2765/F1D83AEB32BF7E4?sharingId=17E88CFAA2995777" target="_blank">View Credential</a>
+            </div>
+            <div class="certification-item">
+                <strong>Microsoft Certified:</strong> Security, Compliance, and Identity Fundamentals<br>
+                <a href="https://learn.microsoft.com/api/credentials/share/en-us/VamsiTejaChevula-2765/8773E63E8BA4A3B6?sharingId=17E88CFAA2995777" target="_blank">View Credential</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
