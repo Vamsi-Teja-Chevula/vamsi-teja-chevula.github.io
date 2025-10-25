@@ -1,345 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vamsi Teja Chevula — Portfolio</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-
 <style>
-:root{
---bg1:#0f172a; --bg2:#0b1020; --card:#111827ee; --glass:rgba(255,255,255,.06);
---border:rgba(255,255,255,.14); --txt:#e5e7eb; --muted:#9ca3af;
---primary:#6366f1; --secondary:#06b6d4; --accent:#a855f7;
-      --grad: linear-gradient(135deg, #06b6d4 0%, #6366f1 50%, #a855f7 100%);
-      --shadow-xl: 0 20px 40px rgba(0,0,0,.45); --radius: 16px;
-      --grad:linear-gradient(135deg, #06b6d4 0%, #6366f1 50%, #a855f7 100%);
-      --shadow-xl: 0 20px 40px rgba(0,0,0,.45); --radius:16px;
-}
+:root{--bg1:#0f172a; --bg2:#0b1020; --card:#111827ee; --glass:rgba(255,255,255,.06);--border:rgba(255,255,255,.14); --txt:#e5e7eb; --muted:#9ca3af;--primary:#6366f1; --secondary:#06b6d4; --accent:#a855f7;--grad:linear-gradient(135deg, #06b6d4 0%, #6366f1 50%, #a855f7 100%);--shadow-xl: 0 20px 40px rgba(0,0,0,.45); --radius:16px}
 *{box-sizing:border-box}
 html,body{height:100%}
-@@ -27,48 +29,68 @@
-font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-line-height:1.6; overflow-x:hidden;
-}
-    a{color:#a5b4fc;text-decoration:none} a:hover{color:#c4b5fd}
-    a{color:#a5b4fc; text-decoration:none}
-    a:hover{color:#c4b5fd}
+body{margin:0;background:linear-gradient(135deg, #0a0f1c 0%, #0f172a 50%, #1e1b4b 100%);color:var(--txt);font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;line-height:1.6; overflow-x:hidden}
+a{color:#a5b4fc;text-decoration:none}
+a:hover{color:#c4b5fd}
 .container{width:min(1200px, 92%); margin:auto}
-
-header{position:sticky; top:0; z-index:40; backdrop-filter: blur(12px);
-background: linear-gradient(to bottom, rgba(10,15,28,.9), rgba(10,15,28,.35));
-      border-bottom:1px solid var(--border)}
-      border-bottom:1px solid var(--border)
-    }
-.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-.brand{display:flex; align-items:center; gap:12px; font-weight:800}
-    .logo{width:34px; height:34px; border-radius:10px; background:var(--grad); position:relative; filter:drop-shadow(0 6px 18px rgba(99,102,241,.45))}
-    .logo:after{content:""; position:absolute; inset:-40%; background: conic-gradient(from 0deg, transparent 0 60%, rgba(255,255,255,.55) 60% 70%, transparent 70% 100%); animation:spin 6s linear infinite}
-    @keyframes spin{to{transform:rotate(1turn)}}
-    .links{display:flex; gap:18px} .links a{font-weight:600; opacity:.9} .links a:hover{opacity:1}
-    .hero{position:relative; padding:80px 0 40px}
-    .hero::before{content:""; position:absolute; inset:-20% -10% 0; pointer-events:none;
-      background: radial-gradient(600px 200px at 10% 20%, rgba(99,102,241,.25), transparent 60%),
-                  radial-gradient(700px 250px at 90% 10%, rgba(6,182,212,.25), transparent 60%),
-                  radial-gradient(500px 200px at 50% 90%, rgba(168,85,247,.25), transparent 60%);
-      filter: blur(40px); opacity:.7}
-    .hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:30px; align-items:center}
-    .title{font-family:Poppins, Inter, system-ui; font-weight:800; font-size:clamp(32px, 6vw, 56px); line-height:1.05; margin:0 0 14px}
-    .subtitle{font-size:clamp(16px, 2.2vw, 20px); color:var(--muted); max-width:60ch}
-    .cta{display:flex; gap:12px; margin-top:22px}
-    .btn{padding:12px 18px; border-radius:12px; border:1px solid var(--border); background:var(--grad); color:white; font-weight:700; letter-spacing:.3px; box-shadow:0 10px 24px rgba(99,102,241,.35); transform:translateY(0); transition:.25s ease}
-    .btn:hover{transform:translateY(-2px); box-shadow:0 16px 36px rgba(99,102,241,.45)}
-    .btn.secondary{background:transparent; border:1px solid #3b82f6; color:#c7d2fe}
-    .btn.secondary:hover{background:rgba(59,130,246,.1)}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border:1px solid var(--border); border-radius:var(--radius); box-shadow: var(--shadow-xl); overflow:hidden}
-    .card .pad{padding:22px}
-    .stats{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top:18px}
-    .stat{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px; display:flex; flex-direction:column; gap:4px}
-    .stat h3{margin:0; font-size:22px} .stat p{margin:0; color:var(--muted)}
-    section{padding:48px 0}
-    h2{font-family:Poppins, Inter; font-size:clamp(22px, 3.2vw, 30px); margin:0 0 18px}
-    .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
-    .skill, .cert{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:14px 16px; display:flex; align-items:center; gap:10px; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
-    .skill:hover, .cert:hover{transform:translateY(-3px); box-shadow:0 12px 24px rgba(0,0,0,.35); border-color:#334155}
-    .pill{font-size:12px; color:#cbd5e1; background:rgba(99,102,241,.15); padding:6px 10px; border-radius:999px; border:1px solid rgba(99,102,241,.35)}
-    .timeline{display:grid; gap:14px}
-    .item{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px}
-    .item h3{margin:0 0 6px} .item p{margin:0; color:var(--muted)}
-    footer{padding:30px 0 60px; color:var(--muted); border-top:1px solid var(--border)}
-    @media (max-width: 980px){ .hero-grid{grid-template-columns: 1fr} .stats{grid-template-columns: 1fr 1fr} .grid{grid-template-columns: 1fr 1fr} }
-    @media (max-width: 640px){ .links{display:none} .cta{flex-direction:column} .stats{grid-template-columns: 1fr} .grid{grid-template-columns: 1fr} }
-    .logo{width:40px; height:40px; border-radius:12px; background:var(--grad);
-      box-shadow:0 10px 20px rgba(99,102,241,.35), inset 0 0 40px rgba(255,255,255,.1);
-      position:relative; overflow:hidden}
-    .logo::after{content:""; position:absolute; inset:-20%; background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 35%)}
-
-    .hero{padding:64px 0 32px}
-    .hero-inner{display:grid; grid-template-columns:1.2fr .8fr; gap:32px; align-items:center}
-    .title{font-family:Poppins, Inter, system-ui; font-size:clamp(28px, 4vw, 48px); font-weight:800; line-height:1.15}
-    .subtitle{color:var(--muted); margin-top:8px}
-
-    .badge{display:inline-flex; align-items:center; gap:10px; padding:8px 14px; border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border-radius:999px;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 6px 20px rgba(0,0,0,.25)}
-
-    .actions{margin-top:18px; display:flex; gap:12px; flex-wrap:wrap}
-    .btn{padding:12px 18px; border-radius:12px; border:1px solid var(--border); font-weight:600;
-      transition:.25s transform ease, .25s box-shadow ease, .25s background ease;
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      box-shadow:0 10px 20px rgba(0,0,0,.25)}
-    .btn:hover{transform:translateY(-2px); box-shadow:0 18px 34px rgba(0,0,0,.35)}
-    .btn.primary{background:var(--grad); color:white; border-color:transparent}
-
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow-xl);
-      backdrop-filter: blur(10px); position:relative; overflow:hidden}
-    .card::before{content:""; position:absolute; inset:0; background:radial-gradient(1200px 160px at -10% -20%, rgba(255,255,255,.06), transparent 60%); pointer-events:none}
-
-    .grid{display:grid; grid-template-columns:repeat(12, 1fr); gap:16px}
-    .col-6{grid-column:span 6}
-    .col-12{grid-column:span 12}
-
-    @media (max-width: 900px){
-      .hero-inner{grid-template-columns:1fr}
-      .col-6{grid-column:span 12}
-    }
-
-    .section-title{font-family:Poppins; font-weight:800; font-size:22px; margin:8px 0 14px}
-    .item{display:flex; gap:12px}
-    .item .dot{width:10px; height:10px; border-radius:999px; background:var(--primary); margin-top:10px; box-shadow:0 0 0 4px rgba(99,102,241,.18)}
-
-    .skills{display:flex; flex-wrap:wrap; gap:10px}
-    .chip{padding:8px 12px; border-radius:999px; border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); color:#dbeafe;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
-
-    .footer{margin:28px 0 40px; color:var(--muted); font-size:14px; text-align:center}
-
-    /* Fancy animated gradient ring */
-    .ring{position:absolute; inset:auto auto -80px -80px; width:220px; height:220px; border-radius:50%;
-      background:conic-gradient(from 90deg, #06b6d4, #6366f1, #a855f7, #06b6d4); filter: blur(16px); opacity:.35;
-      animation:spin 16s linear infinite}
-    @keyframes spin{to{transform:rotate(360deg)}}
+header{position:sticky; top:0; z-index:40; backdrop-filter: blur(12px);background: linear-gradient(to bottom, rgba(10,15,28,.9), rgba(10,15,28,.35));border-bottom:1px solid var(--border)}
+nav{display:flex; justify-content:space-between; align-items:center; padding:1.25rem 0}
+nav h1{margin:0; font-size:1.5rem; font-weight:800; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent}
+nav ul{display:flex; gap:2rem; list-style:none; margin:0; padding:0}
+nav a{font-weight:600; transition:all .2s}
+.hero{text-align:center; padding:6rem 0 4rem}
+.hero h2{margin:0 0 1rem; font-size:3.5rem; font-weight:900; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent}
+.hero p{font-size:1.35rem; color:var(--muted); margin:0}
+section{margin:4rem 0}
+h3{font-size:2rem; font-weight:800; margin:0 0 2rem; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent}
+.card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:2rem; margin-bottom:1.5rem; box-shadow:var(--shadow-xl); backdrop-filter:blur(8px); transition:transform .3s, box-shadow .3s}
+.card:hover{transform:translateY(-4px); box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.card h4{margin:0 0 .5rem; font-size:1.4rem; font-weight:700; color:var(--txt)}
+.card .meta{color:var(--muted); font-size:.95rem; margin-bottom:1rem}
+.card p{margin:.5rem 0 0; color:var(--muted)}
+.skills-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:1rem}
+.skill-tag{background:var(--glass); border:1px solid var(--border); padding:.75rem 1rem; border-radius:12px; text-align:center; font-weight:600; font-size:.95rem; transition:all .3s}
+.skill-tag:hover{background:linear-gradient(135deg, rgba(6,182,212,.2), rgba(99,102,241,.2)); transform:scale(1.05)}
+.contact-links{display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center; margin-top:2rem}
+.contact-btn{display:inline-block; padding:.9rem 2rem; background:var(--grad); border-radius:12px; font-weight:700; color:white; transition:all .3s; box-shadow:0 4px 15px rgba(99,102,241,.4)}
+.contact-btn:hover{transform:translateY(-3px); box-shadow:0 8px 25px rgba(99,102,241,.6); color:white}
+footer{text-align:center; padding:3rem 0; color:var(--muted); border-top:1px solid var(--border); margin-top:5rem}
+@media (max-width: 768px){.hero h2{font-size:2.5rem}.hero p{font-size:1.1rem}nav ul{gap:1rem}h3{font-size:1.6rem}}
 </style>
 </head>
 <body>
-@@ -77,130 +99,115 @@
-<div class="brand">
-<div class="logo" aria-hidden="true"></div>
-<div>
-          <div style="font-size:14px; opacity:.8">Portfolio</div>
-          <div style="font-size:16px">Vamsi Teja Chevula</div>
-          <div style="font-size:18px">Vamsi Teja Chevula</div>
-          <div style="font-size:12px; color:var(--muted)">Advanced Application Engineer Analyst @ Accenture</div>
-</div>
-</div>
-      <nav class="links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#certs">Certifications</a>
-        <a href="#contact">Contact</a>
-      <nav class="actions">
-        <a class="btn" href="mailto:vamsitejayadav@gmail.com">Email</a>
-        <a class="btn" href="https://in.linkedin.com/in/vamsi-teja-chevula" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/Vamsi-Teja-Chevula" target="_blank" rel="noopener">GitHub</a>
+<header>
+<nav class="container">
+<h1>VTC</h1>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#certifications">Certifications</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
-</div>
 </header>
-
-  <main>
-  <main class="container">
-<section class="hero">
-      <div class="container hero-grid">
-      <div class="hero-inner">
-<div>
-          <h1 class="title">Software Engineer at Accenture</h1>
-          <p class="subtitle">Passionate about building reliable, scalable solutions with clean design, modern web technologies, and a strong foundation from NITK Surathkal.</p>
-          <div class="cta">
-            <a class="btn" href="#contact">Get in touch</a>
-            <a class="btn secondary" href="#skills">Explore my skills</a>
-          </div>
-          <div class="stats">
-            <div class="stat"><h3>Accenture</h3><p>Current Role • Software Engineer</p></div>
-            <div class="stat"><h3>NITK Surathkal</h3><p>Education • National Institute of Technology Karnataka</p></div>
-            <div class="stat"><h3>21+ Skills</h3><p>Frontend • Backend • DevOps • Data</p></div>
-          <div class="badge">Currently: Advanced Application Engineer Analyst @ Accenture (Oct 2023 – Present)</div>
-          <h1 class="title">Engineer building AI-driven data solutions<br><span style="background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent">GenAI • LLMs • Azure • Data</span></h1>
-          <p class="subtitle">I design and ship modern AI and data applications end-to-end—spanning cloud, data engineering, and intelligent experiences.</p>
-          <div class="actions">
-            <a class="btn primary" href="mailto:vamsitejayadav@gmail.com">Get in touch</a>
-            <a class="btn" href="https://github.com/Vamsi-Teja-Chevula" target="_blank" rel="noopener">Projects</a>
+<main class="container">
+<div class="hero">
+<h2>Vamsi Teja Chevula</h2>
+<p>Advanced Application Engineer | AI & Data Analytics Specialist</p>
 </div>
+<section id="experience">
+<h3>Experience</h3>
+<div class="card">
+<h4>Advanced Application Engineer Analyst</h4>
+<div class="meta">Accenture | Oct 2023 - Present</div>
+<p>Leading advanced application development and engineering solutions.</p>
 </div>
-        <div>
-          <div class="card"><div class="pad">
-            <h2 style="margin-top:0">Quick Snapshot</h2>
-            <ul style="margin:0; padding-left:18px">
-              <li>Software Engineer at Accenture, focusing on high-quality delivery</li>
-              <li>B.Tech graduate from NITK Surathkal</li>
-              <li>21 technical skills across frontend, backend, DevOps, and data</li>
-              <li>4 industry-recognized certifications</li>
-            </ul>
-          </div></div>
-        <div class="card" style="min-height:220px;">
-          <div class="ring" aria-hidden="true"></div>
-          <h3 class="section-title">Education</h3>
-          <div class="item">
-            <div class="dot"></div>
-            <div>
-              <div style="font-weight:700">B.Tech, Civil Engineering — NITK Surathkal</div>
-              <div style="color:var(--muted); font-size:14px">2019 – 2023</div>
-            </div>
-          </div>
-          <h3 class="section-title" style="margin-top:16px">Certifications</h3>
-          <ul style="margin:0; padding-left:18px">
-            <li>Microsoft Certified: Azure AI Engineer Associate</li>
-            <li>Microsoft Certified: Azure AI Fundamentals</li>
-            <li>Microsoft Certified: Azure Fundamentals</li>
-            <li>Microsoft C++ Course</li>
-          </ul>
-</div>
+<div class="card">
+<h4>Gaming Events Organizer</h4>
+<div class="meta">ENGINEER NITK | Aug 2022 - Sep 2022</div>
+<p>Organized and managed gaming events at NITK.</p>
 </div>
 </section>
-
-    <section id="about">
-      <div class="container">
-        <div class="card"><div class="pad">
-          <h2>About Vamsi</h2>
-          <p>I'm Vamsi Teja Chevula, a Software Engineer at Accenture. I enjoy building robust applications, designing intuitive interfaces, and solving complex problems. My education at NITK Surathkal gives me a strong grounding in computer science and engineering principles.</p>
-        </div></div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="grid" aria-label="Skills grid">
-          <div class="skill"><span class="pill">HTML5</span><span>Semantic, accessible markup</span></div>
-          <div class="skill"><span class="pill">CSS3</span><span>Flexbox, Grid, Animations</span></div>
-          <div class="skill"><span class="pill">JavaScript</span><span>ES6+, tooling</span></div>
-          <div class="skill"><span class="pill">TypeScript</span><span>Type-safe applications</span></div>
-          <div class="skill"><span class="pill">React</span><span>SPA development</span></div>
-          <div class="skill"><span class="pill">Next.js</span><span>SSR/SSG apps</span></div>
-          <div class="skill"><span class="pill">Node.js</span><span>APIs and services</span></div>
-          <div class="skill"><span class="pill">Express</span><span>RESTful backends</span></div>
-          <div class="skill"><span class="pill">Python</span><span>Scripting & data tasks</span></div>
-          <div class="skill"><span class="pill">Java</span><span>OOP, backend</span></div>
-          <div class="skill"><span class="pill">SQL</span><span>Relational databases</span></div>
-          <div class="skill"><span class="pill">MongoDB</span><span>NoSQL design</span></div>
-          <div class="skill"><span class="pill">Git</span><span>Version control</span></div>
-          <div class="skill"><span class="pill">GitHub</span><span>Collaboration & CI</span></div>
-          <div class="skill"><span class="pill">Docker</span><span>Containerization</span></div>
-          <div class="skill"><span class="pill">Kubernetes</span><span>Orchestration basics</span></div>
-          <div class="skill"><span class="pill">CI/CD</span><span>Automation pipelines</span></div>
-          <div class="skill"><span class="pill">Linux</span><span>Shell & tooling</span></div>
-          <div class="skill"><span class="pill">Testing</span><span>Jest, RTL</span></div>
-          <div class="skill"><span class="pill">Agile</span><span>Scrum, delivery</span></div>
-          <div class="skill"><span class="pill">Design</span><span>UI/UX fundamentals</span></div>
-    <section class="grid" style="margin-top:8px">
-      <div class="col-6">
-        <div class="card">
-          <h3 class="section-title">Experience</h3>
-          <div class="item">
-            <div class="dot"></div>
-            <div>
-              <div style="font-weight:700">Advanced Application Engineer Analyst — Accenture</div>
-              <div style="color:var(--muted); font-size:14px">Oct 2023 – Present</div>
-              <ul style="margin:8px 0 0 18px">
-                <li>Built AI and data solutions leveraging Azure, LLMs, and modern data stacks.</li>
-                <li>Developed analytics and automation with Python, Spark, and SQL across cloud data platforms.</li>
-                <li>Drove end-to-end delivery with strong communication and cross-functional collaboration.</li>
-              </ul>
-            </div>
-          </div>
+<section id="education">
+<h3>Education</h3>
+<div class="card">
+<h4>B.Tech in Civil Engineering</h4>
+<div class="meta">NITK | 2019 - 2023</div>
 </div>
-</div>
-    </section>
-
-    <section id="certs">
-      <div class="container">
-        <h2>Certifications</h2>
-        <div class="grid" aria-label="Certifications grid">
-          <div class="cert"><span class="pill">AWS</span><span>Cloud Practitioner (Foundational)</span></div>
-          <div class="cert"><span class="pill">Azure</span><span>AZ-900: Fundamentals</span></div>
-          <div class="cert"><span class="pill">Google</span><span>Associate Cloud Engineer</span></div>
-          <div class="cert"><span class="pill">Scrum</span><span>Professional Scrum Master I</span></div>
-      <div class="col-6">
-        <div class="card">
-          <h3 class="section-title">Skills (21)</h3>
-          <div class="skills">
-            <span class="chip">GEN AI</span>
-            <span class="chip">AI</span>
-            <span class="chip">Machine Learning</span>
-            <span class="chip">LLM</span>
-            <span class="chip">Azure</span>
-            <span class="chip">Python</span>
-            <span class="chip">Hive</span>
-            <span class="chip">Spark</span>
-            <span class="chip">Hadoop</span>
-            <span class="chip">C</span>
-            <span class="chip">C++</span>
-            <span class="chip">SQL</span>
-            <span class="chip">Tableau</span>
-            <span class="chip">Excel</span>
-            <span class="chip">Word</span>
-            <span class="chip">HTML</span>
-            <span class="chip">AutoCAD</span>
-            <span class="chip">Communication</span>
-            <span class="chip">Data Analysis</span>
-            <span class="chip">Apache Spark</span>
-            <span class="chip">GitHub</span>
-          </div>
-</div>
-</div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <h2>Experience & Education</h2>
-        <div class="timeline">
-          <div class="item">
-            <h3>Software Engineer — Accenture</h3>
-            <p>Delivering scalable software with modern engineering practices, code quality, and collaboration.</p>
-      <div class="col-12">
-        <div class="card" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; justify-content:space-between">
-          <div>
-            <div style="font-weight:700; font-size:18px">Let’s build something great</div>
-            <div style="color:var(--muted); font-size:14px">Open to AI, data, and platform engineering opportunities.</div>
-</div>
-          <div class="item">
-            <h3>B.Tech — NITK Surathkal</h3>
-            <p>Strong foundation in computer science fundamentals, data structures, algorithms, and systems.</p>
-          <div class="actions">
-            <a class="btn primary" href="mailto:vamsitejayadav@gmail.com">Contact: vamsitejayadav@gmail.com</a>
-            <a class="btn" href="https://in.linkedin.com/in/vamsi-teja-chevula" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="https://github.com/Vamsi-Teja-Chevula" target="_blank" rel="noopener">GitHub</a>
-</div>
-</div>
+<div class="card">
+<h4>Intermediate</h4>
+<div class="meta">Sri Chaitanya Junior College | 2017 - 2019 | 10 GPA</div>
 </div>
 </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <div class="card"><div class="pad">
-          <p>Feel free to reach out for opportunities, collaboration, or a friendly chat.</p>
-          <ul style="margin:0; padding-left:18px">
-            <li>Email: vamsi.teja@example.com</li>
-            <li>GitHub: github.com/Vamsi-Teja-Chevula</li>
-            <li>Location: India</li>
-          </ul>
-        </div></div>
-      </div>
-    </section>
-    <p class="footer">© 2025 Vamsi Teja Chevula. Built with love and gradients.</p>
+<section id="skills">
+<h3>Skills</h3>
+<div class="skills-grid">
+<div class="skill-tag">GEN AI</div>
+<div class="skill-tag">Artificial Intelligence</div>
+<div class="skill-tag">Machine Learning</div>
+<div class="skill-tag">LLM</div>
+<div class="skill-tag">Microsoft Azure</div>
+<div class="skill-tag">Python</div>
+<div class="skill-tag">Apache Hive</div>
+<div class="skill-tag">Apache Spark</div>
+<div class="skill-tag">Hadoop</div>
+<div class="skill-tag">C</div>
+<div class="skill-tag">C++</div>
+<div class="skill-tag">SQL</div>
+<div class="skill-tag">Tableau</div>
+<div class="skill-tag">Excel</div>
+<div class="skill-tag">Microsoft Word</div>
+<div class="skill-tag">HTML</div>
+<div class="skill-tag">AutoCAD</div>
+<div class="skill-tag">Communication</div>
+<div class="skill-tag">Data Analysis</div>
+</div>
+</section>
+<section id="certifications">
+<h3>Certifications</h3>
+<div class="card">
+<h4>Microsoft Certified: Azure AI Engineer Associate</h4>
+<div class="meta">Mar 2025</div>
+</div>
+<div class="card">
+<h4>Microsoft Certified: Azure AI Fundamentals</h4>
+<div class="meta">Mar 2025</div>
+</div>
+<div class="card">
+<h4>Microsoft Certified: Azure Fundamentals</h4>
+<div class="meta">Feb 2025</div>
+</div>
+<div class="card">
+<h4>Microsoft C++ Course</h4>
+<div class="meta">Feb 2022</div>
+</div>
+</section>
+<section id="contact">
+<h3>Contact</h3>
+<div class="contact-links">
+<a href="mailto:vamsitejayadav@gmail.com" class="contact-btn">Email</a>
+<a href="https://in.linkedin.com/in/vamsi-teja-chevula" class="contact-btn">LinkedIn</a>
+<a href="https://github.com/Vamsi-Teja-Chevula" class="contact-btn">GitHub</a>
+</div>
+</section>
 </main>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Vamsi Teja Chevula • Crafted with
+<footer>
+<div class="container">
+<p>&copy; 2025 Vamsi Teja Chevula. All rights reserved.</p>
+</div>
+</footer>
 </body>
 </html>
